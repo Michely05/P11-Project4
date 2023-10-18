@@ -1,0 +1,42 @@
+<script>
+  const url =
+    "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-ES&page=1&sort_by=popularity.desc";
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNTg5MTFjOWFiNjkxNDdjNTMwN2RiY2QxZTliMjZhYSIsInN1YiI6IjY1MmZhZTEzZWE4NGM3MDEyZDcxZmI4ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QVjbVwdOFkdF10DMY9EXX0-JvgDI96JR0_uWV_c8E9E",
+    },
+  };
+
+  let movies = [];
+
+  fetch(url, options)
+    .then((response) => response.json())
+    .then((data) => (movies = data.results))
+    .catch((err) => console.error(err));
+</script>
+
+<div>
+  {#each movies as movie}
+    <img
+      alt="Film cover"
+      src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+    />
+  {/each}
+</div>
+
+<style>
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0, 20px;
+  }
+  img {
+    height: 440px;
+    object-fit: cover;
+  }
+</style>

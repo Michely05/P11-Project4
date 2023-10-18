@@ -8,7 +8,7 @@
   a {
     text-decoration: none;
     color: white;
-    margin: 0 10px;
+    margin: 0 15px;
   }
 
   a:hover {
