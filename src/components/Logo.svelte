@@ -1,3 +1,11 @@
-<img class="logo" src="" alt="Logo de Filmin" />"
+<script>
+  import logo from "../assets/filmin_logo.png";
+</script>
 
-<h1>Esto viene del Logo.svelte</h1>
+<img src={logo} alt="Logo de Filmin" />
+
+<style>
+  img {
+    height: 40px;
+  }
+</style>
