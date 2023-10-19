@@ -1,6 +1,10 @@
 <script>
+  import { onMount } from "svelte";
+
+  /*Lista 1*/
+
   const url =
-    "https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=es-ES&page=1&sort_by=popularity.desc";
+    "https://api.themoviedb.org/3/movie/now_playing?language=es&page=1";
   const options = {
     method: "GET",
     headers: {
@@ -12,10 +16,14 @@
 
   let movies = [];
 
-  fetch(url, options)
-    .then((response) => response.json())
-    .then((data) => (movies = data.results))
-    .catch((err) => console.error(err));
+  onMount(() =>
+    fetch(url, options)
+      .then((response) => response.json())
+      .then((data) => (movies = data.results))
+      .catch((err) => console.error(err))
+  );
+
+  /*Lista 2*/
 </script>
 
 <div>
@@ -32,11 +40,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 0, 20px;
+    gap: 22px;
   }
   img {
-    height: 440px;
+    height: 420px;
     object-fit: cover;
   }
 </style>
