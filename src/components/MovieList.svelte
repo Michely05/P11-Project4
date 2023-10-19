@@ -1,10 +1,8 @@
 <script>
   import { onMount } from "svelte";
 
-  /*Lista 1*/
+  export let url;
 
-  const url =
-    "https://api.themoviedb.org/3/movie/now_playing?language=es&page=1";
   const options = {
     method: "GET",
     headers: {
@@ -22,8 +20,6 @@
       .then((data) => (movies = data.results))
       .catch((err) => console.error(err))
   );
-
-  /*Lista 2*/
 </script>
 
 <div>
