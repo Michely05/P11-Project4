@@ -2,4 +2,6 @@ body {
     background-color: #141426;
     font-family: Helvetica, sans-serif, Arial;
     margin: none;
+    overflow-x: hidden;
+    margin-bottom: 30px;
 }

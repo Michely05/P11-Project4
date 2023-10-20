@@ -27,8 +27,8 @@
     display: flex;
     color: white;
     font-weight: bold;
-    font-size: 30px;
-    margin-left: 50px;
+    font-size: 25px;
+    margin-left: 45px;
     margin-top: 80px;
   }
 </style>

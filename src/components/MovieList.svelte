@@ -13,11 +13,14 @@
   };
 
   let movies = [];
+  let maxMovies = 12;
 
   onMount(() =>
     fetch(url, options)
       .then((response) => response.json())
-      .then((data) => (movies = data.results))
+      .then((data) => {
+        movies = data.results.slice(0, maxMovies);
+      })
       .catch((err) => console.error(err))
   );
 </script>
