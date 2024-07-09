@@ -18,11 +18,11 @@
   <div class="right-container">
     <button class="button-1">SUSCRÍBETE</button>
     <button class="button-2">INICIAR SESIÓN</button>
-    <img
+    <!-- <img
       class="magnifier-icon"
       src="../src/assets/lupita1.svg"
       alt="Icono de una lupa"
-    />
+    /> -->
   </div>
 </header>
 
