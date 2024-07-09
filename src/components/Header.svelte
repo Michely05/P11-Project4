@@ -43,20 +43,35 @@
   }
   .button-1 {
     height: 32px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 750;
     padding: 0px 10px;
     background-color: #02ffa1;
     border-radius: 5px;
-    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button-1:hover {
+    background-color: #00965f;
+    color: #ffff;
   }
 
   .button-2 {
     height: 32px;
     padding: 0 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 750;
     background-color: #141426;
     color: white;
     border-color: white;
     border-radius: 5px;
-    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .button-2:hover {
+    background-color: #00965f;
+    color: #ffff;
   }
 
   .magnifier-icon {
