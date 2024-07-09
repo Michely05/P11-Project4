@@ -27,7 +27,7 @@
 <MovieList
   url="https://api.themoviedb.org/3/movie/now_playing?language=es&page=1"
 />
-<p class="list-title">Cada martes, una nueva serie</p>
+<p class="list-title">Cada martes, una nueva película</p>
 <MovieList
   url="https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1"
 />
@@ -81,18 +81,34 @@
     background-color: #141426;
     border-radius: 5px;
     border-color: gray;
+    outline: 0;
     margin-right: 2px;
     padding-left: 10px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
     color: gray;
   }
+
+  input::placeholder {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+  }
+
   .start-button {
     height: 40px;
     width: 140px;
     padding: 0 20px;
     border-radius: 5px;
-    font-weight: bold;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 750;
     background-color: #02ffa1;
     border: none;
+    cursor: pointer;
+  }
+
+  .start-button:hover {
+    background-color: #00965f;
+    color: #ffff;
   }
 
   .final-message {
